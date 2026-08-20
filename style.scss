@@ -13,9 +13,48 @@ $font-family: 'times', -apple-system, BlinkMacSystemFont, sans-serif;
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
-html{
-    scroll-behavior: smooth;
+.btnn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.btnn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btnn svg {
+    width: 18px;
+    height: auto;
+    transform: rotate(180deg); /* la flèche pointe vers le bas à la base, on la retourne */
+}
+
+.btnn svg path {
+    fill: #fff;
+}
+
+.btnn:hover {
+    background-color: #555;
 }
 
 body {
@@ -77,9 +116,19 @@ body {
 
 /* Hero Section */
 .hero {
+  display: flex;
+  justify-content: center;
   padding: 6rem 2rem;
   text-align: center;
   background: linear-gradient(180deg, $bg-primary 0%, #F3EEE7 100%);
+
+
+.hero-content {
+  display: flex;
+  flex-direction: column; // pour empiler verticalement
+  align-items: center;
+  gap: 45px; 
+}
 
   .rating-badge {
     display: inline-block;
@@ -100,12 +149,13 @@ body {
     margin-bottom: 1rem;
   }
 
-  p {
-    color: $text-muted;
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-    font-size: 1.1rem;
-  }
+  .ali{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400; // ou normal, bold, 700, etc.
+  font-style: normal;
+  font-size: 35px; // ajustez selon la taille voulue
+}
 }
 
 .btn-primary {
@@ -131,18 +181,130 @@ body {
 
 /* Gallery Section */
 .gallery {
-  padding: 5rem 6%;
+    text-align: center;
+    padding: 60px 20px;
+
+    .subtitle {
+        margin-bottom: 30px;
+        color: #666;
+    }
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+
+    &-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    &-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 50%;
+        z-index: 10;
+
+        &.prev {
+            left: 15px;
+        }
+
+        &.next {
+            right: 15px;
+        }
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    &-dots {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+    }
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+    }
+
+    &-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 10px;
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+
+    &.active {
+        background: #fff;
+    }
+}
+
+/* Products Section */
+.products {
   text-align: center;
+  padding: 60px 20px;
+  background: #FFF;
 
-  h2 { font-weight: 300; font-size: 2rem; }
-  .subtitle { color: $text-muted; margin-bottom: 2.5rem; }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+  .subtitle {
+    margin-bottom: 30px;
+    color: $text-muted;
   }
 }
+
+.slide-caption {
+  .product-name {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .product-price {
+    display: block;
+    color: $accent-gold;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 2px;
+  }
+}
+
 
 /* Services & Filter Section */
 .services {

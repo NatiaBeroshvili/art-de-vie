@@ -6,6 +6,9 @@
   <title>Art de Vie Coiffure — Eckbolsheim</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+DE+LA+Guides&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,6 +18,7 @@
     <nav class="nav">
       <a href="#about">À Propos</a>
       <a href="#services">Prestations</a>
+      <a href="#products">Nos produits</a>
       <a href="#gallery">Galerie</a>
       <a href="#location">Contact</a>
       <a href="#booking" class="btn-nav">Réserver</a>
@@ -26,18 +30,80 @@
     <div class="hero-content">
       <div class="rating-badge">★ 4.9 sur 5 (95 avis Planity)</div>
       <h1>L'Art de la Coiffure à Eckbolsheim</h1>
-      <p>Un savoir-faire d'exception pour révéler votre style dans un cadre élégant et chaleureux.</p>
+      <p class="ali">Un savoir-faire d'exception, pour révéler votre style dans un cadre élégant et chaleureux.</p>
       <a href="#booking" class="btn-primary">Réserver un Rendez-vous</a>
     </div>
   </section>
 
-  <!-- Real Photo Section -->
-  <section id="gallery" class="gallery">
+
+
+
+<!-- Real Photo Section -->
+<section id="gallery" class="gallery">
     <h2>Notre Salon</h2>
     <p class="subtitle">Découvrez l'atmosphère unique de notre établissement</p>
-      <Image src="https://res.cloudinary.com/planity/image/upload/t_d_main,f_auto/tzapavqw3kpwqra4zovo" alt="Espace coiffure moderne et élégant" caption="Espace Coiffure & Styling" />
+
+    <div class="slider">
+        <div class="slider-track">
+            <div class="slide">
+                <img src="https://res.cloudinary.com/planity/image/upload/t_d_main,f_auto/tzapavqw3kpwqra4zovo" alt="Espace coiffure moderne et élégant">
+                <p class="slide-caption">Espace Coiffure & Styling</p>
+            </div>
+            <div class="slide">
+                <img src="https://res.cloudinary.com/planity/image/upload/t_d_main,f_auto/sdj8qhtvilwvp0f7gios" alt="Description photo 2">
+                <p class="slide-caption">Légende photo 2</p>
+            </div>
+            <div class="slide">
+                <img src="https://res.cloudinary.com/planity/image/upload/t_d_main,f_auto/hs6380kjxzrhup6hv67z" alt="Description photo 3">
+                <p class="slide-caption">Légende photo 3</p>
+            </div>
+        </div>
+
+        <button class="slider-btn prev" aria-label="Photo précédente">&#10094;</button>
+        <button class="slider-btn next" aria-label="Photo suivante">&#10095;</button>
+
+        <div class="slider-dots"></div>
     </div>
-  </section>
+</section>
+
+
+<!-- Products Section -->
+<section id="products" class="products">
+    <h2>Nos Produits</h2>
+    <p class="subtitle">Une sélection de produits professionnels, pour prendre soin de vos cheveux!</p>
+
+    <div class="slider">
+        <div class="slider-track">
+            <div class="slide">
+                <img src="images/produit-1.png" alt="Shampoing Nutrition Intense">
+                <div class="slide-caption">
+                    <span class="product-name">Shampoing Nutrition Intense</span>
+                    <span class="product-price">19,90 €</span>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="URL_PRODUIT_2.jpg" alt="Nom du produit 2">
+                <div class="slide-caption">
+                    <span class="product-name">Sérum Réparateur</span>
+                    <span class="product-price">24,50 €</span>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="URL_PRODUIT_3.jpg" alt="Nom du produit 3">
+                <div class="slide-caption">
+                    <span class="product-name">Huile Sublimatrice</span>
+                    <span class="product-price">29,00 €</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="slider-btn prev" aria-label="Produit précédent">&#10094;</button>
+        <button class="slider-btn next" aria-label="Produit suivant">&#10095;</button>
+
+        <div class="slider-dots"></div>
+    </div>
+</section>
+
 
   <!-- Services & Pricing Section -->
   <section id="services" class="services">
@@ -186,18 +252,21 @@
     </div>
   </section>
 
+
+
+<button id="scrollToTop" class="btnn" aria-label="Retour en haut">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="6.443 47.497 187.114 105.008" role="presentation" aria-hidden="true">
+        <path d="M174.476 51.261l-74.704 74.193L25.578 50.75c-4.287-4.316-11.566-4.341-15.882-.054s-4.341 11.565-.055 15.882l82.107 82.673c4.287 4.316 11.566 4.341 15.882.055l82.673-82.107c4.316-4.287 4.341-11.566.055-15.882s-11.235-4.342-15.882-.056z"></path>
+    </svg>
+</button>
+
+
+
   <footer class="footer">
     <p>© 2026 Art de Vie Coiffure — Eckbolsheim. Tous droits réservés.</p>
   </footer>
 
   
-        <button id="scrollToTop" class="btnn">
-            <svg preserveAspectRatio="xMidYMid meet" data-bbox="6.443 47.497 187.114 105.008" xmlns="http://www.w3.org/2000/svg" viewBox="6.443 47.497 187.114 105.008" role="presentation" aria-hidden="true" class="fl">
-                <g>
-                    <path d="M174.476 51.261l-74.704 74.193L25.578 50.75c-4.287-4.316-11.566-4.341-15.882-.054s-4.341 11.565-.055 15.882l82.107 82.673c4.287 4.316 11.566 4.341 15.882.055l82.673-82.107c4.316-4.287 4.341-11.566.055-15.882s-11.235-4.342-15.882-.056z"></path>
-                </g>
-            </svg>
-        </button>
   <script src="script.js"></script>
 </body>
 </html>
