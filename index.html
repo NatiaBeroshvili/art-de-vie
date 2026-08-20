@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art de Vie Coiffure — Eckbolsheim</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="logo">ART DE VIE <span>COIFFURE</span></div>
+    <nav class="nav">
+      <a href="#about">À Propos</a>
+      <a href="#services">Prestations</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#location">Contact</a>
+      <a href="#booking" class="btn-nav">Réserver</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="rating-badge">★ 4.9 sur 5 (95 avis Planity)</div>
+      <h1>L'Art de la Coiffure à Eckbolsheim</h1>
+      <p>Un savoir-faire d'exception pour révéler votre style dans un cadre élégant et chaleureux.</p>
+      <a href="#booking" class="btn-primary">Réserver un Rendez-vous</a>
+    </div>
+  </section>
+
+  <!-- Real Photo Section -->
+  <section id="gallery" class="gallery">
+    <h2>Notre Salon</h2>
+    <p class="subtitle">Découvrez l'atmosphère unique de notre établissement</p>
+    <div class="gallery-grid">
+      <Image src="https://res.cloudinary.com/planity/image/upload/t_d_main,f_auto/gw0l1ilwy218luvelsds" alt="Intérieur du salon Art de Vie Coiffure à Eckbolsheim" caption="L'Espace Art de Vie Coiffure" />
+      <Image src="https://res.cloudinary.com/planity/image/upload/t_d_main,f_auto/tzapavqw3kpwqra4zovo" alt="Espace coiffure moderne et élégant" caption="Espace Coiffure & Styling" />
+    </div>
+  </section>
+
+  <!-- Services & Pricing Section -->
+  <section id="services" class="services">
+    <h2>Nos Services & Tarifs</h2>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">Tous</button>
+      <button class="filter-btn" data-category="femme">Femmes</button>
+      <button class="filter-btn" data-category="homme">Hommes</button>
+      <button class="filter-btn" data-category="technique">Couleur & Balayage</button>
+    </div>
+
+    <div class="service-grid">
+      <div class="card" data-category="femme">
+        <div class="card-header">
+          <h3>Shampooing, Coupe & Coiffage Femme</h3>
+          <span class="price">45 €</span>
+        </div>
+        <p>Soin sur-mesure, diagnostic personnalisé, coupe et brushing élégant.</p>
+        <button class="btn-select-service" data-service="Shampooing & Coupe Femme - 45€">Choisir</button>
+      </div>
+
+      <div class="card" data-category="technique">
+        <div class="card-header">
+          <h3>Balayage / Ombré Hair</h3>
+          <span class="price">95 €</span>
+        </div>
+        <p>Éclaircissement naturel, patine incluse et soin protecteur pour brillance extrême.</p>
+        <button class="btn-select-service" data-service="Balayage / Ombré Hair - 95€">Choisir</button>
+      </div>
+
+      <div class="card" data-category="technique">
+        <div class="card-header">
+          <h3>Coloration & Brushing</h3>
+          <span class="price">65 €</span>
+        </div>
+        <p>Couverture complète, pigments haute tenue et soin nourrissant intense.</p>
+        <button class="btn-select-service" data-service="Coloration & Brushing - 65€">Choisir</button>
+      </div>
+
+      <div class="card" data-category="homme">
+        <div class="card-header">
+          <h3>Coupe Homme & Coiffage</h3>
+          <span class="price">24 €</span>
+        </div>
+        <p>Shampooing traitant, coupe structurée aux ciseaux/tondeuse et finition produit.</p>
+        <button class="btn-select-service" data-service="Coupe Homme - 24€">Choisir</button>
+      </div>
+
+      <div class="card" data-category="homme">
+        <div class="card-header">
+          <h3>Taille de Barbe Traditionnelle</h3>
+          <span class="price">18 €</span>
+        </div>
+        <p>Taillage, contours précis, serviette chaude et huile d'entretien.</p>
+        <button class="btn-select-service" data-service="Taille de Barbe - 18€">Choisir</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Booking Section -->
+  <section id="booking" class="booking">
+    <div class="booking-container">
+      <h2>Réservation en Ligne</h2>
+      <p>Confirmation immédiate — Paiement sur place</p>
+
+      <form id="booking-form">
+        <div class="form-group">
+          <label for="name">Nom et Prénom</label>
+          <input type="text" id="name" required placeholder="ex: Sophie Martin">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Numéro de téléphone</label>
+          <input type="tel" id="phone" required placeholder="06 12 34 56 78">
+        </div>
+
+        <div class="form-group">
+          <label for="service">Prestation choisie</label>
+          <select id="service" required>
+            <option value="">Sélectionnez une prestation...</option>
+            <option value="Shampooing & Coupe Femme - 45€">Shampooing & Coupe Femme (45 €)</option>
+            <option value="Balayage / Ombré Hair - 95€">Balayage / Ombré Hair (95 €)</option>
+            <option value="Coloration & Brushing - 65€">Coloration & Brushing (65 €)</option>
+            <option value="Coupe Homme - 24€">Coupe Homme (24 €)</option>
+            <option value="Taille de Barbe - 18€">Taille de Barbe (18 €)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+          </div>
+          <div class="form-group">
+            <label for="time">Heure</label>
+            <select id="time" required>
+              <option value="">Choisir l'heure...</option>
+              <option value="09:00">09:00</option>
+              <option value="10:30">10:30</option>
+              <option value="14:00">14:00</option>
+              <option value="15:30">15:30</option>
+              <option value="17:00">17:00</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary full-width">Valider la Réservation</button>
+      </form>
+
+      <div id="confirmation-msg" class="hidden">
+        <div class="msg-card">
+          <i class="fa-solid fa-circle-check"></i>
+          <h3>Réservation Confirmée !</h3>
+          <p id="summary-text"></p>
+          <small>Un SMS de confirmation vous a été envoyé. Paiement directement au salon.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Hours Section -->
+  <section id="location" class="location-section">
+    <div class="location-grid">
+      <div class="info-box">
+        <h2>Art de Vie Coiffure</h2>
+        <p><i class="fa-solid fa-location-dot"></i> 28 Rue du Général Leclerc, 67201 Eckbolsheim</p>
+        <p><i class="fa-solid fa-star"></i> Note Planity : <strong>4.9 / 5</strong> (95 avis)</p>
+        
+        <h3>Horaires d'ouverture</h3>
+        <ul class="hours-list">
+          <li><span>Mardi — Vendredi</span> <span>09:00 - 19:00</span></li>
+          <li><span>Samedi</span> <span>08:30 - 17:00</span></li>
+          <li><span>Dimanche</span> <span class="closed">Fermé</span></li>
+        </ul>
+      </div>
+      <div class="map-box">
+        <iframe 
+          src="https://maps.google.com/maps?q=28%20Rue%20du%20G%C3%A9n%C3%A9ral%20Leclerc,%2067201%20Eckbolsheim&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Art de Vie Coiffure — Eckbolsheim. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

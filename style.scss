@@ -1,0 +1,345 @@
+// SCSS Variables
+$bg-primary: #FAF7F2;
+$bg-card: #FFFFFF;
+$text-main: #1C1917;
+$text-muted: #6B7280;
+$accent-gold: #B8860B;
+$accent-hover: #966D09;
+$border-color: #E5E7EB;
+$font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-primary;
+  color: $text-main;
+  font-family: $font-family;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header & Nav */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(250, 247, 242, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 6%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    span {
+      font-weight: 600;
+      color: $accent-gold;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: $text-main;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+
+      &:hover { color: $accent-gold; }
+
+      &.btn-nav {
+        border: 1px solid $text-main;
+        padding: 0.5rem 1.4rem;
+        border-radius: 30px;
+        &:hover {
+          background: $text-main;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, $bg-primary 0%, #F3EEE7 100%);
+
+  .rating-badge {
+    display: inline-block;
+    background: #FFF;
+    border: 1px solid $border-color;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: $accent-gold;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $text-muted;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: $accent-gold;
+  color: #FFF;
+  padding: 0.9rem 2.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: $accent-hover;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 5rem 6%;
+  text-align: center;
+
+  h2 { font-weight: 300; font-size: 2rem; }
+  .subtitle { color: $text-muted; margin-bottom: 2.5rem; }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Services & Filter Section */
+.services {
+  padding: 5rem 6%;
+  background: #FFF;
+
+  h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+
+    .filter-btn {
+      background: $bg-primary;
+      border: none;
+      padding: 0.6rem 1.4rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+
+      &.active, &:hover {
+        background: $text-main;
+        color: #FFF;
+      }
+    }
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    .card {
+      border: 1px solid $border-color;
+      padding: 2rem;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1rem;
+
+        h3 { font-size: 1.1rem; font-weight: 500; }
+        .price { font-weight: 600; color: $accent-gold; font-size: 1.2rem; }
+      }
+
+      p { color: $text-muted; font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+      .btn-select-service {
+        background: transparent;
+        border: 1px solid $accent-gold;
+        color: $accent-gold;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background: $accent-gold;
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+/* Booking Section */
+.booking {
+  padding: 5rem 6%;
+
+  .booking-container {
+    max-width: 550px;
+    margin: 0 auto;
+    background: #FFF;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    text-align: center;
+
+    h2 { font-weight: 300; margin-bottom: 0.2rem; }
+    p { color: $text-muted; font-size: 0.9rem; margin-bottom: 2rem; }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: left;
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label { font-size: 0.85rem; margin-bottom: 0.4rem; color: $text-muted; }
+
+      input, select {
+        padding: 0.8rem;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        outline: none;
+
+        &:focus { border-color: $accent-gold; }
+      }
+    }
+  }
+}
+
+/* Confirmation Card */
+.hidden { display: none !important; }
+
+#confirmation-msg {
+  margin-top: 1.5rem;
+  .msg-card {
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: #166534;
+
+    i { font-size: 2rem; margin-bottom: 0.5rem; }
+    h3 { margin-bottom: 0.5rem; }
+    p { color: #15803D; margin-bottom: 0.5rem; }
+    small { color: #166534; font-size: 0.8rem; }
+  }
+}
+
+/* Location Section */
+.location-section {
+  padding: 5rem 6%;
+  background: #FFF;
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .info-box {
+    h2 { font-weight: 300; margin-bottom: 1.5rem; }
+    p { margin-bottom: 0.8rem; color: $text-muted; }
+    i { color: $accent-gold; margin-right: 0.5rem; }
+
+    h3 { margin: 2rem 0 1rem; font-weight: 400; font-size: 1.1rem; }
+
+    .hours-list {
+      list-style: none;
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px dashed $border-color;
+        font-size: 0.95rem;
+
+        .closed { color: #DC2626; font-weight: 500; }
+      }
+    }
+  }
+
+  .map-box {
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid $border-color;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: $text-main;
+  color: #9CA3AF;
+  font-size: 0.85rem;
+}
