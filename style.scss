@@ -6,12 +6,16 @@ $text-muted: #6B7280;
 $accent-gold: #B8860B;
 $accent-hover: #966D09;
 $border-color: #E5E7EB;
-$font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family: 'times', -apple-system, BlinkMacSystemFont, sans-serif;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body {
