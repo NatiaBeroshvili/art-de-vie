@@ -343,11 +343,12 @@ body {
 
   .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
 
     .card {
       border: 1px solid $border-color;
+      background: rgba(250, 247, 242, 0.95);
       padding: 2rem;
       border-radius: 8px;
       display: flex;
@@ -477,7 +478,15 @@ body {
     h2 { font-weight: 300; margin-bottom: 1.5rem; }
     p { margin-bottom: 0.8rem; color: $text-muted; }
     i { color: $accent-gold; margin-right: 0.5rem; }
+    .phone-link,
+  .planity-link {
+    color: inherit !important;
+    text-decoration: none;
 
+    &:hover {
+      text-decoration: underline;
+    }
+    }
     h3 { margin: 2rem 0 1rem; font-weight: 400; font-size: 1.1rem; }
 
     .hours-list {
@@ -503,9 +512,48 @@ body {
 }
 
 .footer {
+
   text-align: center;
   padding: 2rem;
   background: $text-main;
   color: #9CA3AF;
   font-size: 0.85rem;
+}
+
+.site-footer {
+  background: $bg-primary; // ou une autre couleur de fond pour le footer
+  padding: 3rem 2rem;
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  p {
+    margin: 0;
+    color:#1C1917;// ajustez selon le fond
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    a {
+      color: #966D09;// ajustez selon le fond du footer
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        opacity: 0.8;
+      }
+    }
+  }
 }
