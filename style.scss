@@ -79,13 +79,11 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
   .logo {
-    font-size: 1.4rem;
-    font-weight: 300;
-    letter-spacing: 3px;
-    span {
-      font-weight: 600;
-      color: $accent-gold;
-    }
+   img{
+    width: 200px;
+   
+
+   }
   }
 
   .nav {
@@ -118,16 +116,16 @@ body {
 .hero {
   display: flex;
   justify-content: center;
-  padding: 6rem 2rem;
+  padding: 3rem 2rem;
   text-align: center;
   background: linear-gradient(180deg, $bg-primary 0%, #F3EEE7 100%);
 
 
 .hero-content {
   display: flex;
-  flex-direction: column; // pour empiler verticalement
+  flex-direction: column;
   align-items: center;
-  gap: 45px; 
+  gap:25px; 
 }
 
   .rating-badge {
@@ -143,8 +141,8 @@ body {
   }
 
   h1 {
-    font-size: 3rem;
-    font-weight: 300;
+    font-size: 2.5rem;
+    font-weight: 200;
     letter-spacing: -1px;
     margin-bottom: 1rem;
   }
@@ -152,9 +150,9 @@ body {
   .ali{
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
-  font-weight: 400; // ou normal, bold, 700, etc.
+  font-weight: 400;
   font-style: normal;
-  font-size: 35px; // ajustez selon la taille voulue
+  font-size: 35px; 
 }
 }
 
@@ -374,6 +372,9 @@ body {
       p { color: $text-muted; font-size: 0.9rem; margin-bottom: 1.5rem; }
 
       .btn-select-service {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
         background: transparent;
         border: 1px solid $accent-gold;
         color: $accent-gold;
@@ -388,73 +389,6 @@ body {
         }
       }
     }
-  }
-}
-
-/* Booking Section */
-.booking {
-  padding: 5rem 6%;
-
-  .booking-container {
-    max-width: 550px;
-    margin: 0 auto;
-    background: #FFF;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-    text-align: center;
-
-    h2 { font-weight: 300; margin-bottom: 0.2rem; }
-    p { color: $text-muted; font-size: 0.9rem; margin-bottom: 2rem; }
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    text-align: left;
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-
-      label { font-size: 0.85rem; margin-bottom: 0.4rem; color: $text-muted; }
-
-      input, select {
-        padding: 0.8rem;
-        border: 1px solid $border-color;
-        border-radius: 6px;
-        font-size: 0.95rem;
-        outline: none;
-
-        &:focus { border-color: $accent-gold; }
-      }
-    }
-  }
-}
-
-/* Confirmation Card */
-.hidden { display: none !important; }
-
-#confirmation-msg {
-  margin-top: 1.5rem;
-  .msg-card {
-    background: #F0FDF4;
-    border: 1px solid #BBF7D0;
-    padding: 1.5rem;
-    border-radius: 8px;
-    color: #166534;
-
-    i { font-size: 2rem; margin-bottom: 0.5rem; }
-    h3 { margin-bottom: 0.5rem; }
-    p { color: #15803D; margin-bottom: 0.5rem; }
-    small { color: #166534; font-size: 0.8rem; }
   }
 }
 
