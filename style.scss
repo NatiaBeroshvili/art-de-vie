@@ -69,7 +69,7 @@ body {
 .header {
   position: sticky;
   top: 0;
-  background: rgba(250, 247, 242, 0.95);
+  background:#0101018d;
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
@@ -82,7 +82,6 @@ body {
    img{
     width: 200px;
    
-
    }
   }
 
@@ -90,6 +89,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
+   
 
     a {
       text-decoration: none;
@@ -179,19 +179,15 @@ body {
 
 /* Gallery Section */
 .gallery {
+   width: 100%;
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
 
-    .subtitle {
-        margin-bottom: 30px;
-        color: #666;
-    }
 }
 
 .slider {
     position: relative;
-    width: 100%;
-    max-width: 700px;
+    width: 70%;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;

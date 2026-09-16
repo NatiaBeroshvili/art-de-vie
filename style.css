@@ -61,7 +61,7 @@ body {
 .header {
   position: sticky;
   top: 0;
-  background: rgba(250, 247, 242, 0.95);
+  background: rgba(1, 1, 1, 0.5529411765);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
@@ -157,18 +157,14 @@ body {
 
 /* Gallery Section */
 .gallery {
+  width: 100%;
   text-align: center;
-  padding: 60px 20px;
-}
-.gallery .subtitle {
-  margin-bottom: 30px;
-  color: #666;
+  padding: 40px 20px;
 }
 
 .slider {
   position: relative;
-  width: 100%;
-  max-width: 700px;
+  width: 70%;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
